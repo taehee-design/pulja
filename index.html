@@ -32,8 +32,8 @@ canvas {
   const html = document.documentElement;
   const canvas = {
     'element' : document.getElementById("hero-lightpass"),
-    'width' : 1158,
-    'height' : 770,
+    'width' : 1920,
+    'height' : 1080,
     'frameCount': 80
   }
   const context = canvas.element.getContext("2d");
@@ -67,7 +67,7 @@ canvas {
 
   document.body.addEventListener('scroll', () => {  
     const scrollTop = document.body.scrollTop;
-    const maxScrollTop = document.body.scrollHeight - document.body.innerHeight;
+    const maxScrollTop = document.body.scrollHeight - document.body.clientHeight;
     const scrollFraction = scrollTop / maxScrollTop;
     const frameIndex = Math.min(
       canvas.frameCount - 1,
