@@ -65,17 +65,15 @@ canvas {
     preloadImages();
   });
 
-  document.body.addEventListener('scroll', () => {  
-    const scrollTop = document.body.scrollTop;
-    const maxScrollTop = document.body.scrollHeight - document.body.clientHeight;
+    const scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+    const maxScrollTop = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrollFraction = scrollTop / maxScrollTop;
     const frameIndex = Math.min(
       canvas.frameCount - 1,
       Math.ceil(scrollFraction * canvas.frameCount)
     );
     requestAnimationFrame(() => updateImage(frameIndex + 1));
-  });
-})();
+
         if (document.body.scrollTop == 0) {
 var top = document.documentElement.scrollTop;
 } else {
