@@ -13,7 +13,7 @@ const context = canvas.getContext("2d");
 
 const frameCount = 79;
 const currentFrame = index => (
-  `https://taehee-design.github.io/pulja/${index.toString().padStart(5, '0')}.png`
+  `${index.toString().padStart(5, '0')}.png`
 )
 
 const preloadImages = () => {
@@ -25,14 +25,14 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1);
+canvas.width=1920;
+canvas.height=1080;
 img.onload=function(){
   context.drawImage(img, 0, 0);
 }
 
 const updateImage = index => {
   img.src = currentFrame(index);
-  canvas.width=1920;
-  canvas.height=1080;
   context.drawImage(img, 0, 0);
 }
 
