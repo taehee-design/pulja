@@ -26,60 +26,47 @@ canvas {
 <body>
   <canvas id="hero-lightpass" />
       <script>
-(function(){
-  "use strict";
-  
-  const html = document.documentElement;
-  const canvas = {
-    'element' : document.getElementById("hero-lightpass"),
-    'width' : 1920,
-    'height' : 1080,
-    'frameCount': 80
+const html = document.documentElement;
+const canvas = document.getElementById("hero-lightpass");
+const context = canvas.getContext("2d");
+
+const frameCount = 148;
+const currentFrame = index => (
+  `${index.toString().padStart(5, '0')}.png`
+)
+
+const preloadImages = () => {
+  for (let i = 1; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
   }
-  const context = canvas.element.getContext("2d");
-  const canvasImage = new Image();
-
-  const currentFrame = index => (
-    `${index.toString().padStart(5, '0')}.png`
-  )
-
-  const preloadImages = () => {
-    for (let i = 1; i < canvas.frameCount; i++) {
-      const img = new Image();
-      img.src = currentFrame(i);
-    }
-  };
-
-  const updateImage = index => {
-    canvasImage.src = currentFrame(index);
-    context.drawImage(canvasImage, 0, 0);
-  };
-
-  window.addEventListener('DOMContentLoaded', () => {
-    canvas.element.width = canvas.width;
-    canvas.element.height = canvas.height;
-    canvasImage.src = currentFrame(1); 
-    canvasImage.onload=function(){
-      context.drawImage(canvasImage, 0, 0);
-    }
-    preloadImages();
-  });
-
-    const scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
-    const maxScrollTop = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollFraction = scrollTop / maxScrollTop;
-    const frameIndex = Math.min(
-      canvas.frameCount - 1,
-      Math.ceil(scrollFraction * canvas.frameCount)
-    );
-    requestAnimationFrame(() => updateImage(frameIndex + 1));
-
-        if (document.body.scrollTop == 0) {
-var top = document.documentElement.scrollTop;
-} else {
-var top = document.body.scrollTop;
 };
+
+const img = new Image()
+img.src = currentFrame(1);
+canvas.width=1920;
+canvas.height=1080;
+img.onload=function(){
+  context.drawImage(img, 0, 0);
+}
+
+const updateImage = index => {
+  img.src = currentFrame(index);
+  context.drawImage(img, 0, 0);
+}
+
+window.addEventListener('scroll', () => {  
+  const scrollTop = html.scrollTop;
+  const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(
+    frameCount - 1,
+    Math.ceil(scrollFraction * frameCount)
+  );
   
+  requestAnimationFrame(() => updateImage(frameIndex + 1))
 });
+
+preloadImages()
     </script>
 </body>
