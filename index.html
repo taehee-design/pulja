@@ -12,8 +12,8 @@ const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
 const frameCount = 79;
-const currentFrame = index => (
-  `${index.toString().padStart(5, '0')}.png`
+const currentFrame = number => (
+  `${number.toString().padStart(5, '0')}.png`
 )
 
 const preloadImages = () => {
@@ -31,8 +31,8 @@ img.onload=function(){
   context.drawImage(img, 0, 0);
 }
 
-const updateImage = index => {
-  img.src = currentFrame(index);
+const updateImage = number => {
+  img.src = currentFrame(number);
   context.drawImage(img, 0, 0);
 }
 
@@ -40,12 +40,12 @@ window.addEventListener('scroll', () => {
   const scrollTop = html.scrollTop;
   const maxScrollTop = html.scrollHeight - window.innerHeight;
   const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(
+  const frameNumber = Math.min(
     frameCount - 1,
     Math.ceil(scrollFraction * frameCount)
   );
   
-  requestAnimationFrame(() => updateImage(frameIndex + 1))
+  requestAnimationFrame(() => updateImage(frameNumber + 1))
 });
 
 preloadImages()
