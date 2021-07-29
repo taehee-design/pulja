@@ -52,7 +52,7 @@ canvas {
     context.drawImage(canvasImage, 0, 0);
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  document.body.addEventListener('DOMContentLoaded', () => {
     canvas.element.width = canvas.width;
     canvas.element.height = canvas.height;
     canvasImage.src = currentFrame(1); 
@@ -62,7 +62,7 @@ canvas {
     preloadImages();
   });
 
-  window.addEventListener('scroll', () => {  
+  document.body.addEventListener('scroll', () => {  
     const scrollTop = html.scrollTop;
     const maxScrollTop = html.scrollHeight - window.innerHeight;
     const scrollFraction = scrollTop / maxScrollTop;
