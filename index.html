@@ -14,6 +14,7 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 100vw;
+  max-height: 100vh;
 }
 
 </style>
@@ -72,5 +73,10 @@ canvas {
     requestAnimationFrame(() => updateImage(frameIndex + 1));
   });
 })();
+        if (document.body.scrollTop == 0) {
+var top = document.documentElement.scrollTop;
+} else {
+var top = document.body.scrollTop;
+}
     </script>
 </body>
