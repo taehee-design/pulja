@@ -2,6 +2,9 @@
 <head>
   <meta charSet="utf-8"/>
   <style type="text/css">
+html {
+  height: 100vh;
+}
 
 body {
   height: 500vh;
@@ -63,8 +66,8 @@ canvas {
   });
 
   document.body.addEventListener('scroll', () => {  
-    const scrollTop = html.scrollTop;
-    const maxScrollTop = html.scrollHeight - window.innerHeight;
+    const scrollTop = body.scrollTop;
+    const maxScrollTop = body.scrollHeight - window.innerHeight;
     const scrollFraction = scrollTop / maxScrollTop;
     const frameIndex = Math.min(
       canvas.frameCount - 1,
