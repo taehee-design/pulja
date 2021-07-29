@@ -52,7 +52,7 @@ canvas {
     context.drawImage(canvasImage, 0, 0);
   }
 
-  document.body.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', () => {
     canvas.element.width = canvas.width;
     canvas.element.height = canvas.height;
     canvasImage.src = currentFrame(1); 
