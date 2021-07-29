@@ -66,8 +66,8 @@ canvas {
   });
 
   document.body.addEventListener('scroll', () => {  
-    const scrollTop = body.scrollTop;
-    const maxScrollTop = body.scrollHeight - body.innerHeight;
+    const scrollTop = document.body.scrollTop;
+    const maxScrollTop = document.body.scrollHeight - document.body.innerHeight;
     const scrollFraction = scrollTop / maxScrollTop;
     const frameIndex = Math.min(
       canvas.frameCount - 1,
