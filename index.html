@@ -15,8 +15,6 @@ canvas {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
 }
 
 </style>
@@ -29,7 +27,7 @@ const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
-const frameCount = 148;
+const frameCount = 80;
 const currentFrame = index => (
   `${index.toString().padStart(5, '0')}.png`
 )
