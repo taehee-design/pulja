@@ -2,9 +2,9 @@ const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
-const frameCount = 148;
+const frameCount = 79;
 const currentFrame = index => (
-  `https://taehee-design.github.io/scroll/${index.toString().padStart(4, '0')}.png`
+  `https://taehee-design.github.io/scroll/${index.toString().padStart(5, '0')}.png`
 )
 
 const preloadImages = () => {
