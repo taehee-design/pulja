@@ -1,5 +1,6 @@
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
+const context = canvas.getContext("2d");
 
 const frameCount = 79;
 const currentFrame = index => (
@@ -21,6 +22,8 @@ img.onload=function(){
 
 const updateImage = index => {
   img.src = currentFrame(index);
+  canvas.width=1158;
+  canvas.height=770;
   context.drawImage(img, 0, 0);
 }
 
