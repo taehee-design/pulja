@@ -53,9 +53,9 @@ const updateImage = index => {
   context.drawImage(img, 0, 0);
 }
 
-document.body.addEventListener('scroll', () => {  
+window.addEventListener('scroll', () => {  
   const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - document.body.clientHeight;
+  const maxScrollTop = html.scrollHeight - window.clientHeight;
   const scrollFraction = scrollTop / maxScrollTop;
   const frameIndex = Math.min(
     frameCount - 1,
