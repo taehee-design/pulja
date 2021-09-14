@@ -76,7 +76,7 @@ html {
   transition: 0.5s;
 }
 
-.title {
+#title {
   position: fixed;
   top: 15px;
   align-self: right;
