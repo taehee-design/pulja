@@ -22,6 +22,17 @@ body {
 	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
+video {
+	position : fixed;
+	top : 0; 
+	left : 0;
+	min-width : 100 %;
+	min-height : 100 %;
+	width : auto;
+	height : auto;
+	z-index : -1;
+}
+
 html { 
   scroll-behavior: smooth; 
 } 
