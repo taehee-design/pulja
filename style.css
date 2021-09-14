@@ -1,148 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 
-/* Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
--------------------------------------------------------------- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	background: transparent;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-	 -webkit-text-size-adjust:none;
-}
-body {
-	line-height: 1;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	margin: 0;
-	padding: 0;
-}
-ol, ul, nav {
-	list-style: none;
-}
-blockquote {
-	quotes: none;
-}
-blockquote:before, blockquote:after {
-	content: '';
-	content: none;
-}
-del {
-	text-decoration: line-through;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-a img {
-	border: none;
-}
-img {
-	display: block;
-}
-a {
-	color: #f00;
-	text-decoration: none;
-}
-a:hover {
-}
-
-/* common 
------------------------------------------------------------------------- */
-* { -webkit-text-size-adjust: none; }
-.smooth {
-	transition: all 250ms ease-in;
-	-webkit-transition: all 250ms ease-in;
-	-moz-transition: all 250ms ease-in;
-	-o-transition: all 250ms ease-in;
-}
-.smooth:hover {
-	transition: all 250ms ease-in;
-	-webkit-transition: all 250ms ease-in;
-	-moz-transition: all 250ms ease-in;
-	-o-transition: all 250ms ease-in;
-}
-.smooth-sl {
-	transition: all 120ms ease-in;
-	-webkit-transition: all 120ms ease-in;
-	-moz-transition: all 120ms ease-in;
-	-o-transition: all 120ms ease-in;
-}
-.smooth-sl:hover {
-	transition: all 120ms ease-in;
-	-webkit-transition: all 120ms ease-in;
-	-moz-transition: all 120ms ease-in;
-	-o-transition: all 120ms ease-in;
-}
-.ctw {
-	transform: translate(-50%, 0%);
-	-webkit-transform: translate(-50%, 0%);
-	-moz-transform: translate(-50%, 0%);
-	-o-transform: translate(-50%, 0%);
-}
-.cth {
-	transform: translate(0%, -50%);
-	-webkit-transform: translate(0%, -50%);
-	-moz-transform: translate(0%, -50%);
-	-o-transform: translate(0%, -50%);
-}
-.cent {
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-}
-*:focus {
-	outline: none;
-}
-.zero {
-	font-size: 0;
-	letter-spacing: 0;
-	word-spacing: 0;
-}
-textarea, input {
-	-webkit-appearance: none;
-	-webkit-border-radius: 0;
-}
-/* common 
------------------------------------------------------------------------- */
-.mbo { display: none; }
-.pco { display: block; }
-.noline { border: none !important; }
-.slick-dots {
-	bottom: -36px !important;	 
-}
-.slick-dots li {
-	margin: 0 4px !important;
-	width: 20px !important;
-	height: 20px !important;
-}
-.slick-dots li button:before {
-	font-size: 16pt !important;
-}
-figure {
-	width: 100%;
-	margin: 0;
-	border: 1px solid #ddd;
-	box-sizing: border-box;
-}
-figure img {
-	width: 100%;
-	height: auto;
-}
-.img-comp-container {
-	margin-bottom: 80px;
-	border: 1px solid #ddd;
-}
 .btn {
 	text-transform: uppercase;
 	text-indent: 25px;
@@ -151,46 +8,7 @@ figure img {
 	height: 52px;
 	line-height: 54px;
 	background-color: #00b8ff;
-	background-image: url('images/arrow-down.svg');
-	background-position: right 24px center;
-	background-size: 20px;
-	background-repeat: no-repeat;
-	color: #fff;
 }
-.btn2 {
-	background-image: url('images/arrow-right.svg');
-}
-.mbr {
-	display: none;
-}
-.whhcent {
-	opacity: 0;
-	transform: translate3d(-50%, calc(-50% + 30px), 0);
-}
-.movecent {
-	opacity: 1;
-	transform: translate3d(-50%, -50% , 0);
-	transition: transform 1.2s cubic-bezier(0.165, 0.840, 0.440, 1.000), opacity 1s ease;
-}
-.hideout {
-	opacity: 0;
-	transform: translate3d(0, 50px, 0);
-}
-#sec-next h2.hideout {
-	transform: translate3d(1000px, 0px, 0);
-	opacity: 1;
-}
-#sec-next h2.hidein {
-	transform: translate3d(0px, 0px, 0);
-	transition: transform 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-}
-.hidein {
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-	transition: transform 1.2s cubic-bezier(0.165, 0.840, 0.440, 1.000), opacity 1s ease;
-}
-/* layout
------------------------------------------------------------------------- */
 html {
 	width: 100%;
 }
@@ -204,10 +22,7 @@ body {
 	overflow: auto;
 	font-size: 13pt;
 	color: #28323c;
-	font-family:
-		"AvenirLTPro-Heavy",
-		'sdg-m',
-		sans-serif;
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 header {
 	position: fixed;
@@ -226,9 +41,6 @@ header {
 	height: 100%;
 	left: 50%;
 }
-header.chg #hamberger span {
-	background-color: #00B8FF;
-}
 header .logo {
 	width: 70px;
 	position: absolute;
@@ -243,37 +55,6 @@ header .title {
 	position: absolute;
 	top: 50%;
 	left: 0px;
-}
-header #logo-w {
-	display: block;
-}
-header.chg #logo-w {
-	display: none;
-}
-header.chg #logo {
-	display: block;
-}
-#nav {
-	width: auto;
-	top: 50%;
-	right: 0px;
-	box-sizing: border-box;
-	background-color: transparent;
-	position: absolute;
-	transform: translate(0%, -50%);
-	-webkit-transform: translate(0%, -50%);
-	-moz-transform: translate(0%, -50%);
-	-o-transform: translate(0%, -50%);
-}
-#nav div {
-	position: absolute;
-	bottom: 32px;
-	left: 32px;
-	color: #fff;
-}
-.open-menu {
-	opacity: 1 !important;
-	visibility: visible !important;
 }
 #gnb {
 }
@@ -306,62 +87,6 @@ header.chg #logo {
 	color: #646f7c;
 	font-size: 21pt;
 }
-#hamberger {
-	display: none;
-	position: absolute;
-	top: 40px;
-	right: 40px;
-	width: 42px;
-	height: 16px;
-	cursor: pointer;
-	z-index: 11;
-}
-#hamberger span {
-	width: 32px;
-	height: 3px;
-	background-color: #fff;
-	display: block;
-	position: absolute;
-	top: 0;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: 200ms ease-in-out;
-	-moz-transition: 200ms ease-in-out;
-	-o-transition: 200ms ease-in-out;
-	transition: 200ms ease-in-out;
-}
-#hamberger span:last-child {
-	position: absolute;
-	top: auto;
-	bottom: 0;
-	right: 0;
-}
-#hamberger span:nth-child(1) {
-	bottom: 0px;
-}
-#hamberger:hover span {
-	background: #00B8FF;
-}
-#hamberger.open span {
-	right: 0;
-	width: 80%;
-	top: 50%;
-}
-#hamberger.open span:nth-child(1) {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-#hamberger.open span:last-child {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-/* content */
 .content {
 	margin: 0 auto;
 	padding-top: 178px;
@@ -403,76 +128,6 @@ header.chg #logo {
 	word-break: keep-all;
 	width: 100%;
 }
-/* footer */
-footer {
-}
-footer #logo-footer {
-	position: absolute;
-	top: 38px;
-	width: 140px;
-}
-footer #footer-inner {
-	height: 100px;
-	position: relative;
-	max-width: 1280px;
-	width: 100%;
-	margin: 0 auto;
-	border-top: 1px solid #ddd;
-}
-footer copyright {
-	position: absolute;
-	top: 39px;
-	right: 0;
-	color: #C5C8CE;
-	font-size: 14pt;
-	line-height: 1.3;
-}
-footer ul li p {
-	font-size: 11pt;
-	color: #C5C8CE;
-}
-#footer-info {
-	width: 952px;
-	float: right;
-	margin-top: 36px;
-	font-size: 14pt;
-	color: #C5C8CE;
-	line-height: 1.4;
-}
-#footer-info ul {
-	border-top: 1px solid #ddd;
-	padding-top: 30px;
-	margin-bottom: 44px;
-}
-footer ul li {
-	float: left;
-	vertical-align: top;
-	margin-left: 28px;
-}
-footer ul li:first-child {
-	margin-left: 0;
-}
-footer ul li a {
-	font-size: 12pt;
-	color: #C5C8CE;
-	text-transform: uppercase;
-	letter-spacing: 0.02em;
-}
-footer ul li a:hover {
-	color: #777;
-}
-#footer-info b {
-	font-weight: normal;
-	letter-spacing: 0.02em;
-	font-family:
-		"AvenirLTPro-Heavy",
-		'sdg-m',
-		sans-serif;
-}
-#footer-info p {
-	margin-bottom: 20px;
-	letter-spacing: 0.02em;
-}
 /* main */
 .main footer {
 	display: none;
@@ -490,12 +145,9 @@ footer ul li a:hover {
 	font-size: 30pt;
 	line-height: 65px;
 	letter-spacing: -0.02em;
-	font-family: 'sdg-l';
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 	position: absolute;
 	top: 25vh;
-}
-#main-copy b {
-	font-family: 'sdg-m';
 }
 #main-txt {
 	color: #646f7c;
