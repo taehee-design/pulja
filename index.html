@@ -1,116 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR"> 
 <head>
-  <meta charSet="utf-8"/>
-  <style type="text/css">
-html {
-  height: 100vh;
-}
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-body {
-  height: 500vh;
-  background: #E9EFF4;
-}
+	<title>쏘카 브랜드 디자인 가이드</title>
 
-canvas {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
-}
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="mobile.css" media="all" />
 
-</style>
-  <script>
-const html = document.documentElement;
-const canvas = document.getElementById("hero-lightpass");
-const context = canvas.getContext("2d");
+	<!-- js -->
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/all.js"></script>
 
-const frameCount = 80;
-const currentFrame = index => (
-  `https://taehee-design.github.io/pulja/${index.toString().padStart(5, '0')}.png`
-)
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-  }
-};
-
-const img = new Image()
-img.src = currentFrame(1);
-canvas.width=1920;
-canvas.height=1080;
-img.onload=function(){
-  context.drawImage(img, 0, 0);
-}
-
-const updateImage = index => {
-  img.src = currentFrame(index);
-  context.drawImage(img, 0, 0);
-}
-
-window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.clientHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(
-    frameCount - 1,
-    Math.ceil(scrollFraction * frameCount)
-  );
-  
-  requestAnimationFrame(() => updateImage(frameIndex + 1))
-});
-
-preloadImages()
-    </script>
 </head>
-
-<body>
-  <canvas id="hero-lightpass" width="1920" height="1080">
-      <script>
-const html = document.documentElement;
-const canvas = document.getElementById("hero-lightpass");
-const context = canvas.getContext("2d");
-
-const frameCount = 80;
-const currentFrame = index => (
-  `https://taehee-design.github.io/pulja/${index.toString().padStart(5, '0')}.png`
-)
-
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-  }
-};
-
-const img = new Image()
-img.src = currentFrame(1);
-canvas.width=1920;
-canvas.height=1080;
-img.onload=function(){
-  context.drawImage(img, 0, 0);
-}
-
-const updateImage = index => {
-  img.src = currentFrame(index);
-  context.drawImage(img, 0, 0);
-}
-
-window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.clientHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(
-    frameCount - 1,
-    Math.ceil(scrollFraction * frameCount)
-  );
-  
-  requestAnimationFrame(() => updateImage(frameIndex + 1))
-});
-
-preloadImages()
-    </script>
-    </canvas>
+<body class="main">
+	<header>
+		<div id="header-inner" class="ctw">
+			<a href="/">
+				<img id="logo" class="logo cth" src="images/logo.svg" alt="logo">
+			</a>
+			<div id="hamberger" class="cth">
+				<span></span>
+				<span></span>
+			</div>
+			<div id="nav">
+				<ul id="gnb" class="zero">
+					<li><a href="/logo.html">Logo</a></li>
+					<li><a href="/color.html">Color</a></li>
+					<li><a href="/typography.html">Typography</a></li>
+					<li><a href="/iconography.html">Iconography</a></li>
+					<li><a href="/photography.html">Photography</a></li>
+					<li><a href="/illustration.html">illustration</a></li>
+					<li><a href="/spaceframe.html">Space Frame</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section id="main-wrap" class="ctw">
+		<article id="main-copy">
+		종합 모빌리티 플랫폼으로 확장하는<br> 쏘카의 디자인 가이드라인은 브랜드의 모든 접점에서<br> 쏘카의 가치를 일관성 있게 담을 수 있는 방법을 안내합니다.<br><b>이제 쏘카로 더 여유로운 삶을 즐기세요!</b>
+		</article>
+		<article id="main-txt">안내되는 규정을 정확히 이해한 후 활용해주시고 가이드를 임의로 판단하여 적용하는 것을 절대 금지합니다. <br>본 가이드 외의 예외적인 경우나 적용이 어려운 부분이 있을 시 쏘카 브랜드 경험(BX)팀으로 문의 주시기 바랍니다.
+			<ul>
+				<li>쏘카 브랜드 경험(BX)팀</li>
+				<li>bx@socar.kr</li>
+			</ul>
+		</article>
+	</section>
+	<div id="blue"></div>
+	<div id="white"></div>
+	<footer>
+		<div id="footer-inner">
+			<img id="logo-footer" src="images/logo-footer.svg" alt="">
+			<copyright>&copy;SOCAR</copyright>
+		</div>
+	</footer>
 </body>
+</html>
+
+
