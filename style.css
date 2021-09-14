@@ -7,11 +7,13 @@
 	width: 278px;
 	height: 52px;
 	line-height: 54px;
-	background-color: #00b8ff;
+	background-color: #553EFF;
 }
+
 html {
 	width: 100%;
 }
+
 body {
 	min-width: 1300px;
 	width: 100%;
@@ -24,68 +26,53 @@ body {
 	color: #28323c;
 	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
-header {
-	position: fixed;
-	width: 100%;
-	height: 80px;
-	background-color: #fff;
-	z-index: 100;
-	-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
-	box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+
+html { 
+  scroll-behavior: smooth; 
+} 
+  
+#gnb-header {
+  display: flex;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFFFFF4D;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); 
+  border-bottom: 0.8px solid #292929;
 }
-#header-inner {
-	position: relative;
-	max-width: 1280px;
-	width: 100%;
-	height: 100%;
-	left: 50%;
+
+#gnb-logo {
+  width: 70px;
+  display: flex;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  background-image: /images/logo.svg;
 }
-header .logo {
-	width: 70px;
-	position: absolute;
-	top: 50%;
-	left: 0px;
-	transform: translate(0%, -50%);
-	-webkit-transform: translate(0%, -50%);
-	-moz-transform: translate(0%, -50%);
-	-o-transform: translate(0%, -50%);
+
+#gnb-menu {
+  display: flex;
+  }
+#gnb-menu .menu-item {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 15px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.2;
+  text-decoration: none;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
-header .title {
-	position: absolute;
-	top: 50%;
-	left: 0px;
-}
-#gnb {
-}
-#gnb li {
-	display: inline-block;
-	margin-left: 22px;
-	position: relative;
-}
-#gnb li.act::before {
-	width: 100%;
-	content: "";
-	position: absolute;
-	top: 45px;
-	height: 4px;
-	background-color: #00b8ff;
-}
-#gnb li:first-child {
-	margin-left: 0;
-}
-#gnb li a {
-	font-size: 14pt;
-	color: #000;
-	letter-spacing: 0.01em;
-}
-#gnb li a:hover, 
-#gnb li a:hover span {
-	color: #00b8ff;
-}
-#gnb li a span {
-	color: #646f7c;
-	font-size: 21pt;
+
+#gnb-menu .menu-item:hover {
+  color: #444444CC;
+  transition: 0.5s;
 }
 .content {
 	margin: 0 auto;
