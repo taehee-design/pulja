@@ -23,7 +23,6 @@ body {
 	text-rendering: optimizeLegibility;
 	overflow: auto;
 	font-size: 13pt;
-	color: #28323c;
 	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
@@ -78,7 +77,7 @@ html {
 
 #title {
   position: fixed;
-  top: 15px;
+  top: 25px;
   align-self: right;
   align-items: center;
   justify-content: center;
