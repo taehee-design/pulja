@@ -10,10 +10,6 @@
 	background-color: #553EFF;
 }
 
-html {
-	width: 100%;
-}
-
 body {
 	min-width: 1300px;
 	width: 100%;
@@ -83,7 +79,7 @@ html {
   justify-content: center;
   margin-left: calc(80% - 185px);
   display: flex;
-  font-color: #C6C6C6 !important;
+  font-color: #C6C6C6;
   font-weight: 700;
   font-size: 16px;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
