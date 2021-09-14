@@ -85,33 +85,6 @@ html {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
-.content {
-	margin: 0 auto;
-	padding-top: 178px;
-	margin-bottom: 80px;
-	min-height: 500px;
-	max-width: 1280px;
-	width: 100%;
-	overflow: auto;
-}
-
-.content-inner {
-	width: 952px;
-	float: right;
-}
-
-.content-inner h1 {
-	color: #000;
-	font-size: 68pt;
-	margin-bottom: 40px;
-}
-
-.content-inner p {
-	max-width: 760px;
-	word-break: keep-all;
-	width: 100%;
-}
-
 #main-wrap {
 	position: relative;
 	max-width: 1280px;
@@ -122,7 +95,7 @@ html {
 }
 
 #main-copy {
-	color: #374553;
+	color: #292929;
 	font-size: 30pt;
 	line-height: 65px;
 	letter-spacing: -0.02em;
@@ -132,7 +105,7 @@ html {
 }
 
 #main-txt {
-	color: #292929;
+	color: #C5C5D8;
 	font-size: 12pt;
 	letter-spacing: -0.02em;
 	line-height: 25px;
