@@ -48,7 +48,7 @@ html {
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 10px;
   margin-left: 20%;
   background-image: url('https://www.pulja.co.kr/resource/images/logo.svg');
@@ -61,7 +61,7 @@ html {
 #gnb-menu .menu-item {
   display: flex;
   margin-left: 40px;
-  margin-top: 15px;
+  margin-top: 25px;
   color: #292929;
   font-size: 16px;
   font-weight: 400;
@@ -77,13 +77,13 @@ html {
 
 #title {
   position: fixed;
-  top: 25px;
+  top: 35px;
   align-self: right;
   align-items: center;
   justify-content: center;
   margin-left: calc(80% - 120px);
   display: flex;
-  font-color: #C6C6C6;
+  font-color: #C6C6C6 !important;
   font-weight: 700;
   font-size: 16px;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
