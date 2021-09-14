@@ -1,28 +1,6 @@
-@font-face {font-family: 'AvenirLTPro-Heavy';src: url('fonts/392D54_8_0.eot');src: url('fonts/392D54_8_0.eot?#iefix') format('embedded-opentype'),url('fonts/392D54_8_0.woff2') format('woff2'),url('fonts/392D54_8_0.woff') format('woff'),url('fonts/392D54_8_0.ttf') format('truetype');}
-@font-face {font-family: 'AvenirLTPro-Black';src: url('fonts/392D54_A_0.eot');src: url('fonts/392D54_A_0.eot?#iefix') format('embedded-opentype'),url('fonts/392D54_A_0.woff2') format('woff2'),url('fonts/392D54_A_0.woff') format('woff'),url('fonts/392D54_A_0.ttf') format('truetype');}
-@font-face {font-family: 'AvenirLTPro-Roman';src: url('fonts/3985A1_0_0.eot');src: url('fonts/3985A1_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/3985A1_0_0.woff2') format('woff2'),url('fonts/3985A1_0_0.woff') format('woff'),url('fonts/3985A1_0_0.ttf') format('truetype');}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 
-@font-face {
-	font-family: 'sdg-l';
-	src: url('fonts/SDGothicNeobTTF-bLt.eot');
-	src: url('fonts/SDGothicNeobTTF-bLt.eot?#iefix') format('embedded-opentype'),
-	url('fonts/SDGothicNeobTTF-bLt.woff2') format('woff2'),
-	url('fonts/SDGothicNeobTTF-bLt.woff') format('woff');
-}
-@font-face {
-	font-family: 'sdg-m';
-	src: url('fonts/SDGothicNeobTTF-dMd.eot');
-	src: url('fonts/SDGothicNeobTTF-dMd.eot?#iefix') format('embedded-opentype'),
-	url('fonts/SDGothicNeobTTF-dMd.woff2') format('woff2'),
-	url('fonts/SDGothicNeobTTF-dMd.woff') format('woff');
-}
-@font-face {
-	font-family: 'sdg-b';
-	src: url('fonts/SDGothicNeobTTF-fBd.eot');
-	src: url('fonts/SDGothicNeobTTF-fBd.eot?#iefix') format('embedded-opentype'),
-	url('fonts/SDGothicNeobTTF-fBd.woff2') format('woff2'),
-	url('fonts/SDGothicNeobTTF-fBd.woff') format('woff');
-}
 /* Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
@@ -212,21 +190,6 @@ figure img {
 	transform: translate3d(0, 0, 0);
 	transition: transform 1.2s cubic-bezier(0.165, 0.840, 0.440, 1.000), opacity 1s ease;
 }
-.ab {
-	font-family: 'AvenirLTPro-Black',
-		'sdg-b',
-		sans-serif;
-}
-.ah {
-	font-family: 'AvenirLTPro-Heavy',
-		'sdg-m',
-		sans-serif;
-}
-.ar {
-	font-family: 'AvenirLTPro-Roman',
-		'sdg-l',
-		sans-serif;
-}
 /* layout
 ------------------------------------------------------------------------ */
 html {
@@ -268,7 +231,7 @@ header.chg #hamberger span {
 	background-color: #00B8FF;
 }
 header .logo {
-	width: 118px;
+	width: 70px;
 	position: absolute;
 	top: 50%;
 	left: 0px;
@@ -276,6 +239,11 @@ header .logo {
 	-webkit-transform: translate(0%, -50%);
 	-moz-transform: translate(0%, -50%);
 	-o-transform: translate(0%, -50%);
+}
+header .title {
+	position: absolute;
+	top: 50%;
+	left: 0px;
 }
 header #logo-w {
 	display: block;
